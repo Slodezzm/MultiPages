@@ -142,17 +142,7 @@ module.exports = {
     hotOnly: false,
     proxy: {
       '': {
-        // target: 'http://jeffrey.itech8.net/',
-        // target: 'http://thomas.itech8.net/',
-        // target: 'http://tong.itech8.net/',
-        // target: 'sk.itech8.net:4443',
-        // target: 'http://sum.itech8.net/',
-        // target: 'https://dev-wzzb.lkch8.site/',
-        // target: 'https://test-wzzb.lkch8.site/',
-        // target: 'https://www.zhibo18.live/', // 正式环境
-        // target: 'https://a03-test-web.we-pj.com/', //测试环境
-        // target: 'https://a03-dev-web.we-pj.com/', //dev环境
-        target: 'https://a03-test-web.we-pj.com/', //灰度环境
+        target: 'http://0.0.0.0/', //灰度环境
         changeOrigin: true,
         ws: true,
       }
