@@ -27,7 +27,7 @@ npm run build
 │   │   ├── intercept.js                                          //H5页面和PC页面拦截互跳（具体参见该文件内说明）
 │   │   └── unit.js                                               //公共方法
 │   ├── H5                                                        //H5活动源码目录
-│   │   └── bobing                                                //中秋博饼项目
+│   │   └── bobing                                                //H5项目
 │   │   │   ├── components                                        //组件
 │   │   │   ├── views                                             //页面
 │   │   │   ├── App.vue                                           //模板入口
@@ -42,12 +42,12 @@ npm run build
 1. 当有新的活动需要上线时，在`pages.config.js`中配置相应的页面信息；
 2. `pages.config.js`需要以目录名为key，配置入口html文件，打包后的文件名，项目title以及需要引用的cdn文件（cdn中包含js和css数组名）；
 3. 按照`pages.config.js`配置在src中新建相应的目录和文件；
-4. 如：中秋需要在H5端制作博饼页面，则在`pages.config.js`中添加如下对象：
+4. 如：需要在H5端制作页面，则在`pages.config.js`中添加如下对象：
 ```
 'H5/bobing': {
   template: 'public/h5.html',
   filename: 'bobing-H5.html',
-  title: '王者直播 - 中秋博饼',
+  title: '',
   cdn:{
     js: ['svga','vue','vue-router','axios','vant'],
     css: ['vant']
@@ -67,7 +67,7 @@ module.exports = {
   'PC/bobing': {
     template: 'public/pc.html',
     filename: 'bobing-PC.html',
-    title: '王者直播 - 中秋博饼',
+    title: '',
     cdn:{
       js: ['vue','vuex','vue-router','axios','element-ui','jquery','socket.io'],
       css: ['element-ui']
@@ -81,7 +81,7 @@ module.exports = {
   //'PC/bobing': {
   //  template: 'public/pc.html',
   //  filename: 'bobing-PC.html',
-  //  title: '王者直播 - 中秋博饼',
+  //  title: '',
   //  cdn:{
   //    js: ['vue','vuex','vue-router','axios','element-ui','jquery','socket.io'],
   //    css: ['element-ui']
@@ -90,7 +90,7 @@ module.exports = {
   'H5/bobing': {
     template: 'public/h5.html',
     filename: 'bobing-H5.html',
-    title: '中秋博饼',
+    title: '',
     cdn:{
       js: ['vue','vue-router','vuex','axios','vant','socket.io'],
       css: ['vant']
