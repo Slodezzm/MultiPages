@@ -1,0 +1,82 @@
+//公共颜色
+$main1: #534FDF;
+$main2: #4F37D1;
+$sort: #565656;
+$title: #000000;
+$gray: #ACAAB3;
+$current: #5D3BAA;
+$first: #1A1A1A;//主要字体颜色
+$second: #7B7B7B;//次要字体颜色
+$remind: #F7434A;//警醒颜色
+$win: #F52157;//胜利
+$lose: #888;//失败
+$dogfall: #35AF5C;//平局
+$ing: #7ABCFE;//进行中
+
+$bg1:#F52157;
+$bg2:#FB6B3D;
+$bg3:#FB9737;
+$bg4:#D2CFD2;
+$color1:#582BB4;
+$color2:#929093;
+
+
+//内容不可选
+@mixin noSelect{
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+//字体过多显示省略号
+@mixin omit($l){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $l;
+    -webkit-box-orient: vertical;
+}
+//字体转rem
+@function  p2r($p){
+    @return ($p / 37.5 * 1rem);
+}
+//宽高
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+//rem宽高
+@mixin rwh($width, $height){
+	width: p2r($width);
+	height: p2r($height);
+}
+//vw宽高
+@mixin vwh($width, $height) {
+    width: $width * 1vw;
+	height: $height * 1vw;
+}
+//flex行居中
+@mixin fc{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	justify-content: center;
+    align-items: center;
+}
+//flex行两头列居中
+@mixin fs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	justify-content: space-between;
+    align-items: center;
+}
+//相对定位，宽百分之百，高自动
+@mixin rule {
+    position: relative;
+    width: 100%;
+    height: auto;
+}

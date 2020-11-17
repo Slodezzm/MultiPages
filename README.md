@@ -1,5 +1,5 @@
-# MultiPages
-A multi pages config to easy get start
+# A02活动页配置说明
+
 ## 首次执行
 ```
 npm install

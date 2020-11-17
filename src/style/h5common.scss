@@ -1,0 +1,459 @@
+@import './h5mixin.scss';
+
+body,div,span,header,footer,nav,section,aside,article,ul,ol,dl,dt,dd,li,a,p,h1,h2,h3,h4,h5,h6,i,b,textarea,button,input,select,figure,figcaption {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    font-family: "Microsoft Yahei";
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    &:hover {
+        outline: none;
+    }
+}
+html,body{
+    height: auto;
+    color: #000;
+    background: #FFF;
+    -webkit-overflow-scrolling: touch;
+}
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; }
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+  
+hr {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+  
+img {
+    border: none;
+    vertical-align: middle;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+  
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+  
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(255,255,255,.2) inset;
+}
+  
+::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px rgba(255aGroupOfAction
+    ,255aGroupOfAction
+    ,255aGroupOfAction
+    ,.2) inset;
+}
+  
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+input,textarea,video {
+    outline: none;
+    border: none;
+}
+  
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+content: " ";
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    overflow:hidden;
+}
+.fl {
+    float: left
+}
+.fr {
+    float: right
+}
+
+//第三方插件ui修改
+.swiper-pagination-bullet {
+    background: #FFF !important;
+    opacity: 1 !important;
+    transition: width .3s;
+    border-radius: 4px !important;
+    &.swiper-pagination-bullet-active {
+        background: #503AD3 !important;
+        width: 8vw;
+    }
+}
+
+.van-swipe__indicator {
+    @include vwh(2.13,2.13);
+    border-radius: 1.065vw;
+    background: #FFF;
+    opacity: 1 !important;
+    border-radius: 1.065vw !important;
+    transition: width .5s !important;
+    &.van-swipe__indicator--active{
+        background: #503AD3 !important;
+        width: 8vw;
+    }
+}
+
+.highlight {
+    color: $main2;
+}
+
+//分割线
+.split_line {
+    @include rule;
+    border-top: 1px dashed #CCC;
+    margin: 5vw auto;
+}
+
+//动画
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+    will-change: transform;
+    transition: all 500ms;
+    position: absolute;
+}
+
+.slide-right-enter {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+.slide-right-leave-active {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+.slide-left-enter {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+.slide-left-leave-active {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+img[lazy="error"]{
+    background: url("https://zhibo18.live/public/images/default.png") no-repeat center/cover !important;
+}
+img[lazy="error"][data-avatar="1"]{
+    background: url("https://zhibo18.live/default_thumb.jpg") no-repeat center/cover !important;
+}
+
+@keyframes backAndForth {
+    from, to, 50% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-4deg);
+    }
+    75% {
+        transform: rotate(4deg);
+    }
+}
+
+  @keyframes tada {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    5%,
+    10% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    15%,
+    25%,
+    35%,
+    45% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    20%,
+    30%,
+    40% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    50% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+@keyframes shakeY{
+    0%,to{
+        -webkit-transform:translateZ(0);
+        transform:translateZ(0)
+    }
+    10%,30%,50%,70%,90%{
+        -webkit-transform:translate3d(0,-10px,0);
+        transform:translate3d(0,-10px,0)
+    }
+    20%,40%,60%,80%{
+        -webkit-transform:translate3d(0,10px,0);
+        transform:translate3d(0,10px,0)
+    }
+}
+
+@keyframes diceRoll1 {
+    from {
+        transform: translate(-10vw, -15vw) scale(1) rotate(0);
+    }
+    10% {
+        transform: translate(-10vw, 0vw) scale(0.9) rotate(30deg);
+    }
+    20% {
+        transform: translate(2vw, -18vw) scale(1) rotate(120deg);
+    }
+    30% {
+        transform: translate(10vw, -6vw) scale(0.9) rotate(190deg);
+    }
+    40% {
+        transform: translate(17vw, -14vw) scale(1) rotate(216deg);
+    }
+    50% {
+        transform: translate(14vw, -8vw) scale(1.1) rotate(319deg);
+    }
+    60% {
+        transform: translate(9vw, -15vw) scale(1) rotate(402deg);
+    }
+    70% {
+        transform: translate(-10vw, -3vw) scale(1) rotate(487deg);
+    }
+    80% {
+        transform: translate(-12vw, 3vw) scale(1) rotate(408deg);
+    }
+    90% {
+        transform: translate(-5vw, 1vw) scale(1) rotate(382deg);
+        z-index: 2;
+    }
+    to {
+        transform: translate(0vw, 0vw) scale(1) rotate(360deg);
+    }
+}
+@keyframes diceRoll2 {
+    from {
+        transform: translate(-13vw, -13vw) scale(1) rotate(0);
+    }
+    10% {
+        transform: translate(-10vw, 8vw) scale(0.9) rotate(-45deg);
+    }
+    20% {
+        transform: translate(-16vw, -5vw) scale(1) rotate(-180deg);
+    }
+    30% {
+        transform: translate(-10vw, -12vw) scale(1) rotate(-240deg);
+    }
+    40% {
+        transform: translate(-15vw, -3vw) scale(0.9) rotate(-275deg);
+    }
+    50% {
+        transform: translate(-19vw, -11vw) scale(1) rotate(-418deg);
+    }
+    60% {
+        transform: translate(-17vw, 11vw) scale(1) rotate(-551deg);
+    }
+    70% {
+        transform: translate(2vw, 17vw) scale(1) rotate(-627deg);
+    }
+    80% {
+        transform: translate(18vw, 2vw) scale(1) rotate(-567deg);
+    }
+    90% {
+        transform: translate(4vw, -16vw) scale(0.9) rotate(-403deg);
+    }
+    to {
+        transform: translate(0vw, 0vw) scale(1) rotate(-360deg);
+    }
+}
+@keyframes diceRoll3 {
+    from {
+        transform: translate(-15vw, -13.5vw) scale(1) rotate(0); 
+    }
+    10% {
+        transform: translate(-8vw, 0vw) scale(0.9) rotate(90deg);
+    }
+    20% {
+        transform: translate(-14vw, -10vw) scale(1) rotate(135deg);  
+    }
+    30% {
+        transform: translate(-6vw, -3vw) scale(0.95) rotate(189deg);
+    }
+    40% {
+        transform: translate(5vw, -10vw) scale(1.05) rotate(207deg);
+    }
+    50% {
+        transform: translate(-5vw, 0vw) scale(1.1) rotate(387deg);
+    }
+    60% {
+        transform: translate(4vw, 11.2vw) scale(1.2) rotate(483deg);
+    }
+    70% {
+        transform: translate(-34vw, -9.8vw) scale(1) rotate(541deg);
+    }
+    80% {
+        transform: translate(-1vw, -17.8vw) scale(1) rotate(606deg);
+    }
+    90% {
+        transform: translate(-1vw, -10.8vw) scale(0.9) rotate(686deg);
+    }
+    to {
+        transform: translate(0vw, 0vw) scale(1) rotate(720deg);
+    }
+}
+@keyframes diceRoll4 {
+    from {
+        transform: translate(-10vw, -17vw) scale(1) rotate(0);
+    }
+    10% {
+        transform: translate(-12vw, -6vw) scale(0.9) rotate(36deg);
+    }
+    20% {
+        transform: translate(0vw, -20vw) scale(1) rotate(180deg); 
+    }
+    30% {
+        transform: translate(-3vw, -27vw) scale(1.1) rotate(149deg);
+    }
+    40% {
+        transform: translate(3vw, -14vw) scale(1) rotate(210deg);
+    }
+    50% {
+        transform: translate(-3vw, -25vw) scale(1) rotate(295deg);
+    }
+    60% {
+        transform: translate(25vw, -16vw) scale(1.1) rotate(403deg);
+    }
+    70% {
+        transform: translate(22vw, 5vw) scale(1.1) rotate(499deg);
+    }
+    80% {
+        transform: translate(37vw, -13vw) scale(1) rotate(597deg);
+    }
+    90% {
+        transform: translate(-2vw, 4vw) scale(1.1) rotate(672deg);
+    }
+    to {
+        transform: translate(0vw, 0vw) scale(1) rotate(720deg);
+    }
+}
+@keyframes diceRoll5 {
+    from {
+        transform: translate(-13vw, -18vw) scale(1) rotate(0);        
+    }
+    10% {
+        transform: translate(-13vw, 0vw) scale(0.9) rotate(120deg);        
+    }
+    20% {
+        transform: translate(-13vw, 2vw) scale(1.1) rotate(210deg);        
+    }
+    30% {
+        transform: translate(-9vw, -17vw) scale(1) rotate(264deg);        
+    }
+    40% {
+        transform: translate(-18vw, -12vw) scale(1.1) rotate(197deg);        
+    }
+    50% {
+        transform: translate(-13vw, -16vw) scale(1) rotate(270deg);        
+    }
+    60% {
+        transform: translate(-5vw, -11vw) scale(1) rotate(341deg);        
+    }
+    70% {
+        transform: translate(-19vw, -18vw) scale(0.9) rotate(451deg);        
+    }
+    80% {
+        transform: translate(3vw, -28vw) scale(1) rotate(407deg);        
+    }
+    90% {
+        transform: translate(19vw, -22vw) scale(1.1) rotate(389deg);        
+    }
+    to {
+        transform: translate(0vw, 0vw) scale(1) rotate(360deg);
+    }
+}
+@keyframes diceRoll6 {
+    from {
+        transform: translate(-15vw, -17.5vw) scale(1) rotate(0);
+    }
+    10% {
+        transform: translate(-10vw, 0vw) scale(0.9) rotate(30deg);
+    }
+    20% {
+        transform: translate(6vw, -6vw) scale(1) rotate(90deg);
+    }
+    30% {
+        transform: translate(-4vw, 4vw) scale(1.1) rotate(143deg);
+    }
+    40% {
+        transform: translate(-14vw, -10vw) scale(1) rotate(168deg);
+    }
+    50% {
+        transform: translate(-18vw, 5vw) scale(1.1) rotate(277deg);
+    }
+    60% {
+        transform: translate(-13vw, -5vw) scale(1) rotate(348deg);
+    }
+    70% {
+        transform: translate(-15vw, 5vw) scale(1.1) rotate(403deg);
+    }
+    80% {
+        transform: translate(-28vw, 1vw) scale(1.1) rotate(432deg);
+    }
+    90% {
+        transform: translate(-15vw, -6vw) scale(1.1) rotate(389deg);
+    }
+    to {
+        transform: translate(0vw, 0vw) scale(1) rotate(360deg);
+    }
+}
